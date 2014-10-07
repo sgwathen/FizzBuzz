@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#container {
+	margin: 0px auto;
+	width: 400px;
+	height: 100%;	
+}/* CSS Document */
+
+p {
+	text-align: center;
+}
+
+#entNum {
+	width: 300px;
+	text-align: center;	
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
+	margin-left: -40px;	
+}
