@@ -2,32 +2,38 @@
 $(document).ready(function() {
 	$('#fizzbutt').click(function() {
 		event.preventDefault();
-			$('ul').empty();
-		var num = $('#entNum').val();
+		$('ul').empty();
+		var num = +$('#entNum').val();
+		var blank = $('#entNum').val("");
 		if(isNaN(num)) {
 			alert("Please enter a \"real\" number!");
-			$('#entNum').val("");
+			blank
 		} else if (num == "") {
 			alert("Don't forget to enter a number!");
-			$('#entNum').val("");	
+			blank	
 		} else if (num % 1 != 0) {
 			alert("Enter a whole number!");	
-			$('#entNum').val("");
+			blank
 		} else {
 			runLoop(num);
 		}
 	});
 	
 	var runLoop = function(uI) {
+		var blank = $('#entNum').val("");
 		for (i = 1; i <= uI ; i++) {
 			if (i % 5 === 0 && i % 3 === 0) {
 				$('ul').append('<li>' + "FizzBuzz!" + '</li>');
+				blank
 			} else if (i % 5 === 0) {
 				$('ul').append('<li>' + "Buzz!" + '</li>');
+				blank
 			} else if (i % 3 === 0) {
 				$('ul').append('<li>' + "Fizz!" + '</li>');
+				blank
 			} else {
 				$('ul').append('<li>' + i + '</li>');
+				blank
 			}
 		}
 	}
