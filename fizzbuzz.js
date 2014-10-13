@@ -1,5 +1,6 @@
 // JavaScript Document
 $(document).ready(function() {
+	var blank = $('#entNum').val("");
 	$('#fizzbutt').click(function() {
 		event.preventDefault();
 		$('ul').empty();
@@ -7,32 +8,31 @@ $(document).ready(function() {
 		var blank = $('#entNum').val("");
 		if(isNaN(num)) {
 			alert("Please enter a \"real\" number!");
-			blank
+			blank;
 		} else if (num == "") {
 			alert("Don't forget to enter a number!");
-			blank	
+			blank;
 		} else if (num % 1 != 0) {
 			alert("Enter a whole number!");	
-			blank
+			blank;
 		} else {
 			runLoop(num);
 		}
 	});
 	var runLoop = function(uI) {
-		var blank = $('#entNum').val("");
 		for (i = 1; i <= uI ; i++) {
 			if (i % 5 === 0 && i % 3 === 0) {
 				$('ul').append('<li>' + "FizzBuzz!" + '</li>');
-				blank
+				blank;
 			} else if (i % 5 === 0) {
 				$('ul').append('<li>' + "Buzz!" + '</li>');
-				blank
+				blank;
 			} else if (i % 3 === 0) {
 				$('ul').append('<li>' + "Fizz!" + '</li>');
-				blank
+				blank;
 			} else {
 				$('ul').append('<li>' + i + '</li>');
-				blank
+				blank;
 			}
 		}
 	}
