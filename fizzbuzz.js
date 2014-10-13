@@ -18,7 +18,6 @@ $(document).ready(function() {
 			runLoop(num);
 		}
 	});
-	
 	var runLoop = function(uI) {
 		var blank = $('#entNum').val("");
 		for (i = 1; i <= uI ; i++) {
@@ -37,17 +36,14 @@ $(document).ready(function() {
 			}
 		}
 	}
-	
 	$('#entNum').keypress(function(e) {
 		if(e.which == 13) {
 			event.preventDefault();
 			$('#fizzbutt').click();
 		}
 	});
-	
 	$('#reset').click(function() {
 		$('ul').empty();
 	});
-	
 });
 
